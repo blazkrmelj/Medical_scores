@@ -1,0 +1,604 @@
+archetype (adl_version=1.4; uid=30b4caa9-8efd-441c-8922-f8fae7094662)
+    openEHR-EHR-OBSERVATION.adas_cog.v0
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["date"] = <"2018-06-21">
+    >
+    lifecycle_state = <"unmanaged">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    other_details = <
+        ["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+        ["custodian_organisation"] = <"openEHR Foundation">
+        ["original_namespace"] = <"org.openehr">
+        ["original_publisher"] = <"openEHR Foundation">
+        ["custodian_namespace"] = <"org.openehr">
+        ["MD5-CAM-1.0.1"] = <"df7eb6a52aa971dbcb7ae91389f0911a">
+        ["build_uid"] = <"259591e9-eeab-3b72-b17a-1ecfceaba2f1">
+    >
+
+definition
+    OBSERVATION[at0000] matches {
+        data matches {
+            HISTORY[at0001] matches {
+                events cardinality matches {0..*; unordered} matches {
+                    EVENT[at0002] matches {
+                        data matches {
+                            ITEM_TREE[at0003] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[at0005] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0015],
+                                            1|[local::at0016],
+                                            2|[local::at0017],
+                                            3|[local::at0018],
+                                            4|[local::at0019],
+                                            5|[local::at0020],
+                                            6|[local::at0021],
+                                            7|[local::at0022],
+                                            8|[local::at0023],
+                                            9|[local::at0024],
+                                            10|[local::at0025]
+                                        }
+                                    }
+                                    ELEMENT[at0006] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0026],
+                                            1|[local::at0027],
+                                            2|[local::at0028],
+                                            3|[local::at0029],
+                                            4|[local::at0030],
+                                            5|[local::at0031]
+                                        }
+                                    }
+                                    ELEMENT[at0007] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0032],
+                                            1|[local::at0033],
+                                            2|[local::at0034],
+                                            3|[local::at0035],
+                                            4|[local::at0036],
+                                            5|[local::at0037]
+                                        }
+                                    }
+                                    ELEMENT[at0008] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0038],
+                                            1|[local::at0039],
+                                            2|[local::at0040],
+                                            3|[local::at0041],
+                                            4|[local::at0042],
+                                            5|[local::at0043]
+                                        }
+                                    }
+                                    ELEMENT[at0009] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0044],
+                                            1|[local::at0045],
+                                            2|[local::at0046],
+                                            3|[local::at0047],
+                                            4|[local::at0048],
+                                            5|[local::at0049]
+                                        }
+                                    }
+                                    ELEMENT[at0010] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0050],
+                                            1|[local::at0051],
+                                            2|[local::at0052],
+                                            3|[local::at0053],
+                                            4|[local::at0054],
+                                            5|[local::at0055],
+                                            6|[local::at0056],
+                                            7|[local::at0057],
+                                            8|[local::at0058]
+                                        }
+                                    }
+                                    ELEMENT[at0011] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0059],
+                                            1|[local::at0060],
+                                            2|[local::at0061],
+                                            3|[local::at0062],
+                                            4|[local::at0063],
+                                            5|[local::at0064],
+                                            6|[local::at0065],
+                                            7|[local::at0066],
+                                            8|[local::at0067],
+                                            9|[local::at0068],
+                                            10|[local::at0069],
+                                            11|[local::at0070],
+                                            12|[local::at0071]
+                                        }
+                                    }
+                                    ELEMENT[at0012] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0072],
+                                            1|[local::at0073],
+                                            2|[local::at0074],
+                                            3|[local::at0075],
+                                            4|[local::at0076],
+                                            5|[local::at0077]
+                                        }
+                                    }
+                                    ELEMENT[at0013] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0078],
+                                            1|[local::at0079],
+                                            2|[local::at0080],
+                                            3|[local::at0081],
+                                            4|[local::at0082],
+                                            5|[local::at0083]
+                                        }
+                                    }
+                                    ELEMENT[at0014] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0084],
+                                            1|[local::at0085],
+                                            2|[local::at0086],
+                                            3|[local::at0087],
+                                            4|[local::at0088],
+                                            5|[local::at0089]
+                                        }
+                                    }
+                                    ELEMENT[at0090] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0091],
+                                            1|[local::at0092],
+                                            2|[local::at0093],
+                                            3|[local::at0094],
+                                            4|[local::at0095],
+                                            5|[local::at0096]
+                                        }
+                                    }
+                                    ELEMENT[at0097] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_TEXT matches {*}
+                                        }
+                                    }
+                                    ELEMENT[at0098] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_COUNT matches {
+                                                magnitude matches {|>0..<70|}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[at0004] matches {*}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["en"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"ADAS_cog">
+                    description = <"Alzheimer’s Disease Assessment Scale–Cognitive subscale.">
+                >
+                ["at0001"] = <
+                    text = <"History">
+                    description = <"*">
+                >
+                ["at0002"] = <
+                    text = <"Any Event">
+                    description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+                >
+                ["at0003"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0004"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0005"] = <
+                    text = <"Word recall">
+                    description = <"On this task, the subject is given three trials to learn a list of high-frequency, highimagery nouns. The 10 words are printed in block letters on white cards. The subject first reads all the words out loud and then try to recall all of them. The order is not important. The subject’s score is the mean number of words not recalled on three trials (maximum score = 10).">
+                    comment = <"If the subject cannot read the word or is slow, the examiner can say the word out loud and have the subject repeat it. Note this and continue with this procedure at each testing. In some cases, the examiner may have to say all of the words and have the subject repeat them. Regardless, make sure the subject looks at each word while repeating it.">
+                >
+                ["at0006"] = <
+                    text = <"Naming">
+                    description = <"For this task, the subject is asked to name the 12 randomly presented real objects, with high (Flower, Bed, Whistle, Pencil), medium (Rattle, Mask, Scissors, Comb), and low (Wallet, Harmonica, Stethoscope, Tongs) frequency values. The subject is also asked to name the fingers on his/her dominant hand.">
+                    comment = <"Objects should be presented in random order. Do not allow the subject to touch the objects. If the subject does not respond, the examiner should give the clue for that item provided below. If the subject still does not respond or makes an error, go on to the next object. 
+The hardest part of scoring the naming task is determination of the range of correct responses based on the subject’s cultural and geographical background. A response other than the name given on the response form should be scored as correct if it is a name that would be used by a nondemented person with the same cultural background as the subject. Descriptions of the object, semantic or phonemic paraphasias should not be scored as correct.">
+                >
+                ["at0007"] = <
+                    text = <"Commands">
+                    description = <"This task is designed to assess receptive speech. The subject is asked to carry out 5 separate commands with 1 to 5 steps per command.">
+                    comment = <"Each command should be read once. If the subject does not respond or makes an error, the tester should give the entire command one more time. Each command is scored as a whole (no partial credit). All components must be correct for the response to be scored as correct.">
+                >
+                ["at0008"] = <
+                    text = <"Constructional praxis">
+                    description = <"This test assesses the subject’s ability to copy 4 geometric forms ranging from a very simple one (circle) to a fairly difficult one (cube).">
+                    comment = <"The subject should be allowed two attempts for each shape. Allow a second attempt only if the subject asks or indicates a problem with their drawing. The subject may erase if they need to. If the subject draws on top of the printed design, count this as one attempt and indicate that they should try on an empty part of the page. If the subjects says the reproduction is poor, query if the subject wants another try. When two attempts are made, ask the subject to indicate which one is the best, and then score that attempt. 
+A drawing should be scored as correct if the subject has reproduced all of the essential features of the original. Changes in size do not count as errors. Small gaps between lines do not indicate an error, as long as the shape has been reproduced. ">
+                >
+                ["at0009"] = <
+                    text = <"Ideational praxis">
+                    description = <"This task is designed to determine whether the subject can perform a familiar but complex sequence sequence of actions.">
+                    comment = <"There are 5 components to this task (Take this piece of paper, fold it so that it will fit into the envelope, and then put it into the envelope. Then, seal the envelope, address the envelope to yourself, and show me where the stamp goes.). If the subject forgets part of the task, or is having difficulty, the tester should repeat the instruction for the component of the task where the subject is having difficulty. After the first complete instruction only one additional reminder should be given for each component. ">
+                >
+                ["at0010"] = <
+                    text = <"Orientation">
+                    description = <"This task is designed to determine how well oriented the subject is with regard to time and place.">
+                    comment = <"The components of orientation are: his/her name, day of the week, date, month, year, season, time of day and place. The tester should ask the subject for each of these pieces of information one at a time. ">
+                >
+                ["at0011"] = <
+                    text = <"Word recognition">
+                    description = <"On this task the subject is given three trials to learn a list of 12 words. The subject’s score is the mean number of words not recalled on three trials (maximum score = 12).">
+                    comment = <"The learning part of this trial is similar to the learning part of the WORD RECALL TEST since the subject is asked to read each word aloud and try to remember it. After that the 12 studied words are mixed with 12 new words matched to the studied words for frequency and imagery and the subject is asked to decide for each word whether or not it was one of the studied words.
+If the subject does not remember the task (e.g., reads the word rather than responding “Yes” or “No”) then the tester should repeat or rephrase the entire question and make a note in the appropriate column on the worksheet that the subject had to be reminded of the task instructions. Likewise, if the subject appears to have fallen into a response set (i.e., saying “Yes” to every word or saying “No” to every word), then the test instructions should be repeated.">
+                >
+                ["at0012"] = <
+                    text = <"Remembering test instruction">
+                    description = <"This item evaluates the subject’s ability to remember the requirements of the WORD RECOGNITION TASK.">
+                    comment = <"If the subject responds accurately, i.e., “Yes” or “No”, then memory for the instructions is accurate. If the subject fails to respond, this signifies that the instructions have been forgotten and the instruction is repeated.">
+                >
+                ["at0013"] = <
+                    text = <"Spoken language ability">
+                    description = <"This item is a global rating of the quality of speech, i.e., clarity, difficulty in making oneself understood.">
+                    comment = <"In rating this item the tester should consider all of the speech produced by the subject during the test session. Quantity of speech and word finding difficulty are not rated on this item. It should be noted that the higher scores (4-5) on this item are reserved for subjects whose expressive language abilities are impaired to such an extent that they seldom communicate without difficulty.">
+                >
+                ["at0014"] = <
+                    text = <"Word-finding difficulty in spontaneous speech">
+                    description = <"Along with Spoken Language Ability, this item rates impairment in expressive speech, but it rates only word finding difficulty, whereas Spoken Language Ability is a more global rating of the extent to which the subject can communicate verbally.">
+                    comment = <"To rate this item, the tester must determine whether the subject has difficulty in finding the desired word in spontaneous speech. The problem may be overcome by circumlocution, i.e., giving explanatory phrases or nearly satisfactory synonyms. Do not include finger and object naming in this rating.">
+                >
+                ["at0015"] = <
+                    text = <"Subject recalls 10 words.">
+                    description = <"*">
+                >
+                ["at0016"] = <
+                    text = <"Subject recalls 9 words.">
+                    description = <"*">
+                >
+                ["at0017"] = <
+                    text = <"Subject recalls 8 words.">
+                    description = <"*">
+                >
+                ["at0018"] = <
+                    text = <"Subject recalls 7 words.">
+                    description = <"*">
+                >
+                ["at0019"] = <
+                    text = <"Subject recalls 6 words.">
+                    description = <"*">
+                >
+                ["at0020"] = <
+                    text = <"Subject recalls 5 words.">
+                    description = <"*">
+                >
+                ["at0021"] = <
+                    text = <"Subject recalls 4 words.">
+                    description = <"*">
+                >
+                ["at0022"] = <
+                    text = <"Subject recalls 3 words.">
+                    description = <"*">
+                >
+                ["at0023"] = <
+                    text = <"Subject recalls 2 words.">
+                    description = <"*">
+                >
+                ["at0024"] = <
+                    text = <"Subject recalls 1 word.">
+                    description = <"*">
+                >
+                ["at0025"] = <
+                    text = <"Subject recalls 0 words.">
+                    description = <"*">
+                >
+                ["at0026"] = <
+                    text = <"0-2 items (objects and fingers) named incorrectly.">
+                    description = <"*">
+                >
+                ["at0027"] = <
+                    text = <"3-5 items (objects and fingers) named incorrectly.">
+                    description = <"*">
+                >
+                ["at0028"] = <
+                    text = <"6-8 items (objects and fingers) named incorrectly.">
+                    description = <"*">
+                >
+                ["at0029"] = <
+                    text = <"9-11 items (objects and fingers) named incorrectly.">
+                    description = <"*">
+                >
+                ["at0030"] = <
+                    text = <"12-14 items (objects and fingers) named incorrectly.">
+                    description = <"*">
+                >
+                ["at0031"] = <
+                    text = <"15-17 items (objects and fingers) named incorrectly.">
+                    description = <"*">
+                >
+                ["at0032"] = <
+                    text = <"All commands correct.">
+                    description = <"*">
+                >
+                ["at0033"] = <
+                    text = <"1 command incorrect, 4 commands correct.">
+                    description = <"*">
+                >
+                ["at0034"] = <
+                    text = <"2 command incorrect, 3 commands correct.">
+                    description = <"*">
+                >
+                ["at0035"] = <
+                    text = <"3 command incorrect, 2 commands correct.">
+                    description = <"*">
+                >
+                ["at0036"] = <
+                    text = <"4 command incorrect, 1 commands correct.">
+                    description = <"*">
+                >
+                ["at0037"] = <
+                    text = <"All 5 commands incorrect.">
+                    description = <"*">
+                >
+                ["at0038"] = <
+                    text = <"All 4 drawings correct.">
+                    description = <"*">
+                >
+                ["at0039"] = <
+                    text = <"1 form drawn incorrectly. ">
+                    description = <"*">
+                >
+                ["at0040"] = <
+                    text = <"2 forms drawn incorrectly. ">
+                    description = <"*">
+                >
+                ["at0041"] = <
+                    text = <"3 forms drawn incorrectly. ">
+                    description = <"*">
+                >
+                ["at0042"] = <
+                    text = <"4 forms drawn incorrectly. ">
+                    description = <"*">
+                >
+                ["at0043"] = <
+                    text = <"No figures drawn, scribbles; parts of forms; words instead of forms.">
+                    description = <"*">
+                >
+                ["at0044"] = <
+                    text = <"All components performed correctly.">
+                    description = <"*">
+                >
+                ["at0045"] = <
+                    text = <"Failure to perform 1 component.">
+                    description = <"*">
+                >
+                ["at0046"] = <
+                    text = <"Failure to perform 2 components.">
+                    description = <"*">
+                >
+                ["at0047"] = <
+                    text = <"Failure to perform 3 components.">
+                    description = <"*">
+                >
+                ["at0048"] = <
+                    text = <"Failure to perform 4 components.">
+                    description = <"*">
+                >
+                ["at0049"] = <
+                    text = <"Failure to perform 5 components.">
+                    description = <"*">
+                >
+                ["at0050"] = <
+                    text = <"All correct answers.">
+                    description = <"*">
+                >
+                ["at0051"] = <
+                    text = <"1 incorrect answer.">
+                    description = <"*">
+                >
+                ["at0052"] = <
+                    text = <"2 incorrect answers.">
+                    description = <"*">
+                >
+                ["at0053"] = <
+                    text = <"3 incorrect answers.">
+                    description = <"*">
+                >
+                ["at0054"] = <
+                    text = <"4 incorrect answers.">
+                    description = <"*">
+                >
+                ["at0055"] = <
+                    text = <"5 incorrect answers.">
+                    description = <"*">
+                >
+                ["at0056"] = <
+                    text = <"6 incorrect answers.">
+                    description = <"*">
+                >
+                ["at0057"] = <
+                    text = <"7  incorrect answers.">
+                    description = <"*">
+                >
+                ["at0058"] = <
+                    text = <"8  incorrect answers.">
+                    description = <"*">
+                >
+                ["at0059"] = <
+                    text = <"All words recognised.">
+                    description = <"*">
+                >
+                ["at0060"] = <
+                    text = <"1 word unrecognised.">
+                    description = <"*">
+                >
+                ["at0061"] = <
+                    text = <"2 words unrecognised.">
+                    description = <"*">
+                >
+                ["at0062"] = <
+                    text = <"3 words unrecognised.">
+                    description = <"*">
+                >
+                ["at0063"] = <
+                    text = <"4 words unrecognised.">
+                    description = <"*">
+                >
+                ["at0064"] = <
+                    text = <"5 words unrecognised.">
+                    description = <"*">
+                >
+                ["at0065"] = <
+                    text = <"6 words unrecognised.">
+                    description = <"*">
+                >
+                ["at0066"] = <
+                    text = <"7 words unrecognised.">
+                    description = <"*">
+                >
+                ["at0067"] = <
+                    text = <"8 words unrecognised.">
+                    description = <"*">
+                >
+                ["at0068"] = <
+                    text = <"9 words unrecognised.">
+                    description = <"*">
+                >
+                ["at0069"] = <
+                    text = <"10 words unrecognised.">
+                    description = <"*">
+                >
+                ["at0070"] = <
+                    text = <"11 words unrecognised.">
+                    description = <"*">
+                >
+                ["at0071"] = <
+                    text = <"12 words unrecognised.">
+                    description = <"*">
+                >
+                ["at0072"] = <
+                    text = <"Subject never needs extra reminders of instructions.">
+                    description = <"*">
+                >
+                ["at0073"] = <
+                    text = <"Very mild-forgets once.">
+                    description = <"*">
+                >
+                ["at0074"] = <
+                    text = <"Mild-must be reminded 2 times.">
+                    description = <"*">
+                >
+                ["at0075"] = <
+                    text = <"Moderate-must be reminded 3 or 4 times.">
+                    description = <"*">
+                >
+                ["at0076"] = <
+                    text = <"Moderately severe-must be reminded 5 or 6 times.">
+                    description = <"*">
+                >
+                ["at0077"] = <
+                    text = <"Severe-must be reminded 7 or more times.">
+                    description = <"*">
+                >
+                ["at0078"] = <
+                    text = <"No instances when it is difficult to understand the subject.">
+                    description = <"*">
+                >
+                ["at0079"] = <
+                    text = <"Very mild – one instance of lack of understandability.">
+                    description = <"*">
+                >
+                ["at0080"] = <
+                    text = <"Mild – subject has difficulty less than 25% of the time.">
+                    description = <"*">
+                >
+                ["at0081"] = <
+                    text = <"Moderate – subject has difficulty 25-50% of the time.">
+                    description = <"*">
+                >
+                ["at0082"] = <
+                    text = <"Moderately severe – subject has difficulty 50% of the time.">
+                    description = <"*">
+                >
+                ["at0083"] = <
+                    text = <"Severe – one or two word utterance; fluent, but empty speech; mute.">
+                    description = <"*">
+                >
+                ["at0084"] = <
+                    text = <"No evidence of word finding difficulty in spontaneous speech.">
+                    description = <"*">
+                >
+                ["at0085"] = <
+                    text = <"Very mild – 1 or 2 instances, not clinically significant.">
+                    description = <"*">
+                >
+                ["at0086"] = <
+                    text = <"Mild – noticeable circumlocution or synonym substitution.">
+                    description = <"*">
+                >
+                ["at0087"] = <
+                    text = <"Moderate – loss of words without comprehension on occasion.">
+                    description = <"*">
+                >
+                ["at0088"] = <
+                    text = <"Moderately severe – frequent loss of words without comprehension.">
+                    description = <"*">
+                >
+                ["at0089"] = <
+                    text = <"Severe – near total loss of content of words; speech sounds empty; 1 – 2 word utterances.">
+                    description = <"*">
+                >
+                ["at0090"] = <
+                    text = <"Comprehension">
+                    description = <"*">
+                >
+                ["at0091"] = <
+                    text = <"No evidence of poor comprehension.">
+                    description = <"*">
+                >
+                ["at0092"] = <
+                    text = <"Very mild – 1 or 2 instances of misunderstanding.">
+                    description = <"*">
+                >
+                ["at0093"] = <
+                    text = <"Mild – 3-5 instances of misunderstanding.">
+                    description = <"*">
+                >
+                ["at0094"] = <
+                    text = <"Moderate – requires several repetitions and rephrasing.">
+                    description = <"*">
+                >
+                ["at0095"] = <
+                    text = <"Moderately severe – subject only occasionally responds correctly, i.e., yes/no questions.">
+                    description = <"*">
+                >
+                ["at0096"] = <
+                    text = <"Severe – subject rarely responds to questions appropriately, not due to poverty of speech.">
+                    description = <"*">
+                >
+                ["at0097"] = <
+                    text = <"Comment">
+                    description = <"*">
+                >
+                ["at0098"] = <
+                    text = <"Total score">
+                    description = <"The sum of the ordinal scores recorded for each of the eleven component responses.">
+                    comment = <"Total score of 0-70.">
+                >
+            >
+        >
+    >

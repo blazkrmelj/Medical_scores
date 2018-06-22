@@ -1,0 +1,223 @@
+archetype (adl_version=1.4; uid=336db804-98fc-4985-a421-a59f19b34616)
+    openEHR-EHR-OBSERVATION.flacc_pain_score.v0
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["date"] = <"2018-06-21">
+    >
+    lifecycle_state = <"unmanaged">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    other_details = <
+        ["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+        ["custodian_organisation"] = <"openEHR Foundation">
+        ["original_namespace"] = <"org.openehr">
+        ["original_publisher"] = <"openEHR Foundation">
+        ["custodian_namespace"] = <"org.openehr">
+        ["MD5-CAM-1.0.1"] = <"a2f8be6ad6be0833011ff9889d056e33">
+        ["build_uid"] = <"3fce52ef-0441-3a1a-80b4-0bcaa4b5c664">
+    >
+
+definition
+    OBSERVATION[at0000] matches {
+        data matches {
+            HISTORY[at0001] matches {
+                events cardinality matches {0..*; unordered} matches {
+                    EVENT[at0002] matches {
+                        data matches {
+                            ITEM_TREE[at0003] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[at0005] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0005],
+                                            1|[local::at0006],
+                                            2|[local::at0007]
+                                        }
+                                    }
+                                    ELEMENT[at0006] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0012],
+                                            1|[local::at0013],
+                                            2|[local::at0014]
+                                        }
+                                    }
+                                    ELEMENT[at0007] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0015],
+                                            1|[local::at0016],
+                                            2|[local::at0017]
+                                        }
+                                    }
+                                    ELEMENT[at0008] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0018],
+                                            1|[local::at0019],
+                                            2|[local::at0020]
+                                        }
+                                    }
+                                    ELEMENT[at0009] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0021],
+                                            1|[local::at0022],
+                                            2|[local::at0023]
+                                        }
+                                    }
+                                    ELEMENT[at0010] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_TEXT matches {*}
+                                        }
+                                    }
+                                    ELEMENT[at0011] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_COUNT matches {
+                                                magnitude matches {|>0..<10|}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[at0004] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[at0024] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_TEXT matches {*}
+                                        }
+                                    }
+                                    ELEMENT[at0025] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_TEXT matches {*}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["en"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"FLACC_pain_score">
+                    description = <"Face, Legs, Activity, Cry, Consolability (FLACC) Behavioral Scale is 10 point scale that assess pain in critically ill adults and children unable to self-report pain.">
+                >
+                ["at0001"] = <
+                    text = <"History">
+                    description = <"*">
+                >
+                ["at0002"] = <
+                    text = <"Any Event">
+                    description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+                >
+                ["at0003"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0004"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0005"] = <
+                    text = <"Face">
+                    description = <"No particular expression or smile.">
+                >
+                ["at0006"] = <
+                    text = <"Legs">
+                    description = <"If the patient has a worried facial expression, with eyebrows lowered, eyes partially closed, cheeks raised, mouth pursed.">
+                >
+                ["at0007"] = <
+                    text = <"Activity">
+                    description = <"If the patient has deep furrows in the forehead, closed eyes an open mouth, deep lines around nose and lips; distressed-looking face; expression of fright or panic.">
+                >
+                ["at0008"] = <
+                    text = <"Cry">
+                    description = <"*">
+                >
+                ["at0009"] = <
+                    text = <"Consolability">
+                    description = <"*">
+                >
+                ["at0010"] = <
+                    text = <"Comment">
+                    description = <"Additional narrative about the measurement of the scale not captured in other fields.">
+                >
+                ["at0011"] = <
+                    text = <"Total score">
+                    description = <"The sum of the ordinal scores recorded for each of the five component responses.">
+                    comment = <"Each category is scored on the 0-2 scale which results in a total score of 0-10.
+0 = Relaxed and Comfortable, 1-3 = Mild discomfort, 4-6 = Moderate pain, 7-10 = Severe pain or discomfort or both.">
+                >
+                ["at0012"] = <
+                    text = <"Score 0">
+                    description = <"If the muscle tone and the motion in the limbs are normal.">
+                >
+                ["at0013"] = <
+                    text = <"Score 1">
+                    description = <"If patient has increased tone, rigidity, or tension; if there is intermittent flexion or extension of limbs; occasional tremors.">
+                >
+                ["at0014"] = <
+                    text = <"Score 2">
+                    description = <"If the patient has hypertonicity, the legs are pulled tight, there is exaggerated flexion or extension of the limbs, tremors; marked increase in spasticity, constant tremors or jerking.">
+                >
+                ["at0015"] = <
+                    text = <"Score 0">
+                    description = <"If the patient moves easily and freely, normal activity or restrictions; regular, rhythmic respirations.">
+                >
+                ["at0016"] = <
+                    text = <"Score 1">
+                    description = <"If the patient shifts positions, appears hesitant to move, demonstrates guarding, a tense torso, pressure on a body part; tense or guarded movements; mildly agitated (e.g. head back and forth, aggression); shallow, splinting respirations, intermittent sighs.">
+                >
+                ["at0017"] = <
+                    text = <"Score 2">
+                    description = <"If the patient is fixed in a position, rocking; demonstrates side-to-side head movement or rubbing of a body part; severe agitation; head banging; shivering (not rigors); breath holding, gasping or sharp intake of breaths, severe splinting.">
+                >
+                ["at0018"] = <
+                    text = <"Score 0">
+                    description = <"If the patient has no cry or moan, awake or asleep.">
+                >
+                ["at0019"] = <
+                    text = <"Score 1">
+                    description = <" If the patient has occasional moans, cries, whimpers, sighs; occasional verbal outburst or grunt.">
+                >
+                ["at0020"] = <
+                    text = <"Score 2">
+                    description = <" If the patient has frequent or continuous moans, cries, grunts; repeated outbursts, constant grunting.">
+                >
+                ["at0021"] = <
+                    text = <"Score 0">
+                    description = <"If the patient is calm and does not require consoling.">
+                >
+                ["at0022"] = <
+                    text = <"Score 1">
+                    description = <"If the patient responds to comfort by touching or talking in <30 seconds to 1 minute.">
+                >
+                ["at0023"] = <
+                    text = <"Score 2">
+                    description = <"If the patient requires constant comforting or is inconsolable; pushing away caregiver, resisting care or comfort measures.">
+                >
+                ["at0024"] = <
+                    text = <"Awake patient">
+                    description = <"Patients who are awake:o bserve for at least 2-5 minutes; observe legs and body uncovered; reposition patient or observe activity; assess body for tenseness and tone; initiate consoling interventions if needed.">
+                >
+                ["at0025"] = <
+                    text = <"Asleep patient">
+                    description = <"Patients who are asleep: observe for at least 5 minutes or longer; observe body and legs uncovered; if possible reposition the patient; touch the body and assess for tenseness and tone.">
+                >
+            >
+        >
+    >
