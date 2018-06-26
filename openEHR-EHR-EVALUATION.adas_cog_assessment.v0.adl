@@ -1,0 +1,73 @@
+archetype (adl_version=1.4; uid=4bf201f8-020f-492f-8f47-99e405293f25)
+    openEHR-EHR-EVALUATION.adas_cog_assessment.v0
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["date"] = <"2018-06-26">
+    >
+    lifecycle_state = <"unmanaged">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    other_details = <
+        ["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+        ["custodian_organisation"] = <"openEHR Foundation">
+        ["original_namespace"] = <"org.openehr">
+        ["original_publisher"] = <"openEHR Foundation">
+        ["custodian_namespace"] = <"org.openehr">
+        ["MD5-CAM-1.0.1"] = <"acd24576ce344a09b43f4369799482f6">
+        ["build_uid"] = <"919bc38e-f01a-32fc-91d6-346671686e08">
+    >
+
+definition
+    EVALUATION[at0000] matches {
+        data matches {
+            ITEM_TREE[at0001] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    ELEMENT[at0002] occurrences matches {0..1} matches {
+                        value matches {
+                            0|[local::at0003],
+                            1|[local::at0004]
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["en"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"ADAS_cog_assessment">
+                    description = <"Alzheimer’s Disease Assessment Scale–Cognitive subscale.">
+                >
+                ["at0001"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0002"] = <
+                    text = <"Cognitive impairment">
+                    description = <"Score interpretation of ADAS-cog.">
+                >
+                ["at0003"] = <
+                    text = <"Score 0-10">
+                    description = <"No cognitive impairment.">
+                >
+                ["at0004"] = <
+                    text = <"Score 11-70">
+                    description = <"Cognitive impairment present.">
+                    comment = <"A higher result means greater cognitive impairment.">
+                >
+            >
+        >
+    >

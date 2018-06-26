@@ -1,0 +1,82 @@
+archetype (adl_version=1.4; uid=102ea7d5-1acc-4cf0-a754-e801773cb6aa)
+    openEHR-EHR-EVALUATION.flacc_pain_score_assessment.v0
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["date"] = <"2018-06-26">
+    >
+    lifecycle_state = <"unmanaged">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    other_details = <
+        ["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+        ["custodian_organisation"] = <"openEHR Foundation">
+        ["original_namespace"] = <"org.openehr">
+        ["original_publisher"] = <"openEHR Foundation">
+        ["custodian_namespace"] = <"org.openehr">
+        ["MD5-CAM-1.0.1"] = <"2c87cb54da758c02f8b2787bf1f508ec">
+        ["build_uid"] = <"c48f1bdf-73dd-3787-b725-eb87223f9640">
+    >
+
+definition
+    EVALUATION[at0000] matches {
+        data matches {
+            ITEM_TREE[at0001] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    ELEMENT[at0002] occurrences matches {0..1} matches {
+                        value matches {
+                            0|[local::at0003],
+                            1|[local::at0004],
+                            2|[local::at0005],
+                            3|[local::at0006]
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["en"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"FLACC_pain_score_assessment">
+                    description = <"Face, Legs, Activity, Cry, Consolability (FLACC) Behavioral Scale is 10 point scale that assess pain in critically ill adults and children unable to self-report pain.">
+                >
+                ["at0001"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0002"] = <
+                    text = <"Pain assessment">
+                    description = <"Score interpretation of FLACC pain score.">
+                >
+                ["at0003"] = <
+                    text = <"Score 0">
+                    description = <"Relaxed and comfortable.">
+                >
+                ["at0004"] = <
+                    text = <"Score 1-3">
+                    description = <"Mild Discomfort.">
+                >
+                ["at0005"] = <
+                    text = <"Score 4-7">
+                    description = <"Moderate pain.">
+                >
+                ["at0006"] = <
+                    text = <"Score 8-10">
+                    description = <"Severe pain or discomfort or both.">
+                >
+            >
+        >
+    >

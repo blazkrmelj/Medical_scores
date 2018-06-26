@@ -1,0 +1,80 @@
+archetype (adl_version=1.4; uid=bb332d92-0a79-4b4d-a2e6-a564fe93b68f)
+    openEHR-EHR-EVALUATION.nrs_2002_assessment.v0
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["date"] = <"2018-06-26">
+    >
+    lifecycle_state = <"unmanaged">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    other_details = <
+        ["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+        ["custodian_organisation"] = <"openEHR Foundation">
+        ["original_namespace"] = <"org.openehr">
+        ["original_publisher"] = <"openEHR Foundation">
+        ["custodian_namespace"] = <"org.openehr">
+        ["MD5-CAM-1.0.1"] = <"3eed5808724cddf9bc0eec64081d6744">
+        ["build_uid"] = <"35568070-3275-3ea2-b340-e14f0ea8a7bd">
+    >
+
+definition
+    EVALUATION[at0000] matches {
+        data matches {
+            ITEM_TREE[at0001] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    ELEMENT[at0002] occurrences matches {0..1} matches {
+                        value matches {
+                            0|[local::at0003],
+                            1|[local::at0004]
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[at0005] matches {*}
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["en"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Nutrition risk screening 2002 assessment">
+                    description = <"Nutrition risk screening 2002 (NRS-2002) is 7 point scale that predicts risk of malnutrition in hospitalized patients.">
+                >
+                ["at0001"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0002"] = <
+                    text = <"Nutrition risk">
+                    description = <"Score interpretation of nutritional risk">
+                >
+                ["at0003"] = <
+                    text = <"Score <3">
+                    description = <"Low nutrition risk (re-screen weekly)">
+                >
+                ["at0004"] = <
+                    text = <"Score = or > 3">
+                    description = <"High nutrition risk (initiate nutritional care plan)">
+                    comment = <"Food, oral supplements, tube feeding and/or parenteral nutrition as appropriate.">
+                >
+                ["at0005"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+            >
+        >
+    >

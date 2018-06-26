@@ -1,0 +1,152 @@
+archetype (adl_version=1.4; uid=75f6baeb-9602-4331-9c3a-91fbcbe4dbc2)
+    openEHR-EHR-OBSERVATION.qsofa.v0
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["date"] = <"2018-06-26">
+    >
+    lifecycle_state = <"unmanaged">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    other_details = <
+        ["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+        ["custodian_organisation"] = <"openEHR Foundation">
+        ["original_namespace"] = <"org.openehr">
+        ["original_publisher"] = <"openEHR Foundation">
+        ["custodian_namespace"] = <"org.openehr">
+        ["MD5-CAM-1.0.1"] = <"a3a4058877be272f2bc7554be82a59e6">
+        ["build_uid"] = <"ef5bf3ba-993d-3b68-8854-4c492962c988">
+    >
+
+definition
+    OBSERVATION[at0000] matches {
+        data matches {
+            HISTORY[at0001] matches {
+                events cardinality matches {0..*; unordered} matches {
+                    EVENT[at0002] matches {
+                        data matches {
+                            ITEM_TREE[at0003] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[at0005] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0008],
+                                            1|[local::at0009]
+                                        }
+                                    }
+                                    ELEMENT[at0006] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0010],
+                                            1|[local::at0011]
+                                        }
+                                    }
+                                    ELEMENT[at0007] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0012],
+                                            1|[local::at0013]
+                                        }
+                                    }
+                                    ELEMENT[at0014] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_TEXT matches {*}
+                                        }
+                                    }
+                                    ELEMENT[at0015] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_COUNT matches {
+                                                magnitude matches {|>0..<3|}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[at0004] matches {*}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["en"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"qSOFA">
+                    description = <"qSOFA (quick sepsis related organ failure assessment) identifies high-risk patients for in-hospital mortality with suspected infection outside  the ICU.">
+                >
+                ["at0001"] = <
+                    text = <"History">
+                    description = <"*">
+                >
+                ["at0002"] = <
+                    text = <"Any Event">
+                    description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+                >
+                ["at0003"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0004"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0005"] = <
+                    text = <"Altered mental status">
+                    description = <"*">
+                >
+                ["at0006"] = <
+                    text = <"Respiratory rate">
+                    description = <"*">
+                >
+                ["at0007"] = <
+                    text = <"Systolic blood pressure">
+                    description = <"*">
+                >
+                ["at0008"] = <
+                    text = <"GLC=15">
+                    description = <"GLC (Glasgow Coma Scale)">
+                >
+                ["at0009"] = <
+                    text = <"GLY<15">
+                    description = <"GLC (Glasgow Coma Scale)">
+                >
+                ["at0010"] = <
+                    text = <"Respiratory rate < 22">
+                    description = <"*">
+                >
+                ["at0011"] = <
+                    text = <"Respiratorj rate = or > 22">
+                    description = <"*">
+                >
+                ["at0012"] = <
+                    text = <"Systolic blood pressure > 100">
+                    description = <"*">
+                >
+                ["at0013"] = <
+                    text = <"Systolic blood pressure = or < 100">
+                    description = <"*">
+                >
+                ["at0014"] = <
+                    text = <"Comment">
+                    description = <"Additional narrative about the measurement of the scale not captured in other fields.">
+                >
+                ["at0015"] = <
+                    text = <"Total score">
+                    description = <"The sum of the ordinal scores recorded for each of the three component responses.">
+                    comment = <"Total score of 0-3. 0-1 not high risk for in-hospilat mortality; 2-3 high risk for in-hospital mortality.">
+                >
+            >
+        >
+    >
