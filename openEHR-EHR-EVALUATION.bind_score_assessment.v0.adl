@@ -1,0 +1,85 @@
+archetype (adl_version=1.4; uid=4f195a93-f0fb-4729-8935-10d6df34d11b)
+    openEHR-EHR-EVALUATION.bind_score_assessment.v0
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["date"] = <"2018-07-01">
+    >
+    lifecycle_state = <"unmanaged">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    other_details = <
+        ["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+        ["custodian_organisation"] = <"openEHR Foundation">
+        ["original_namespace"] = <"org.openehr">
+        ["original_publisher"] = <"openEHR Foundation">
+        ["custodian_namespace"] = <"org.openehr">
+        ["MD5-CAM-1.0.1"] = <"dc2e6d0524c33f6c882927d0d4e95968">
+        ["build_uid"] = <"bc00271c-b9ac-310e-8377-bc5714568d8f">
+    >
+
+definition
+    EVALUATION[at0000] matches {
+        data matches {
+            ITEM_TREE[at0001] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    ELEMENT[at0002] occurrences matches {0..1} matches {
+                        value matches {
+                            0|[local::at0003],
+                            1|[local::at0004],
+                            2|[local::at0005],
+                            3|[local::at0006]
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["en"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"BIND_score_assessment">
+                    description = <"Bilirubin-induced neurologic dysfunction (BIND) score is used to assess bilirubin induced encephalopathy in neonates with severe hyperbilirubinemia. BIND score helps to identify an infant who requires more aggressive monitoring and management.">
+                >
+                ["at0001"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0002"] = <
+                    text = <"Assess bilirubin induced encephalopathy">
+                    description = <"Score interpretation of BIND score.">
+                >
+                ["at0003"] = <
+                    text = <"BIND score 0">
+                    description = <"Normal">
+                >
+                ["at0004"] = <
+                    text = <"BIND score 1-3">
+                    description = <"Stage 1A">
+                    comment = <"Minimal signs, totatlly reversible with therapy.">
+                >
+                ["at0005"] = <
+                    text = <"BIND score 4-6">
+                    description = <"Stage 1B">
+                    comment = <"Progressive signs but reversible with therapy.">
+                >
+                ["at0006"] = <
+                    text = <"Bind score 7-9">
+                    description = <"Stage 2">
+                    comment = <"Irreversible signs but severity decreased with prompt and aggressive therapy.">
+                >
+            >
+        >
+    >
