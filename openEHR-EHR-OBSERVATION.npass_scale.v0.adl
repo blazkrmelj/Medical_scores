@@ -1,0 +1,302 @@
+archetype (adl_version=1.4; uid=40ecf248-aecc-4809-b4d2-ce7df78433af)
+    openEHR-EHR-OBSERVATION.npass_scale.v0
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["date"] = <"2018-07-02">
+    >
+    lifecycle_state = <"unmanaged">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    other_details = <
+        ["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+        ["custodian_organisation"] = <"openEHR Foundation">
+        ["original_namespace"] = <"org.openehr">
+        ["original_publisher"] = <"openEHR Foundation">
+        ["custodian_namespace"] = <"org.openehr">
+        ["MD5-CAM-1.0.1"] = <"a07acd6540af8aa87a0aa424bbbeb858">
+        ["build_uid"] = <"4d2ba27b-5a16-3b5c-bd6b-d34a48216606">
+    >
+
+definition
+    OBSERVATION[at0000] matches {
+        data matches {
+            HISTORY[at0001] matches {
+                events cardinality matches {0..*; unordered} matches {
+                    EVENT[at0002] matches {
+                        data matches {
+                            ITEM_TREE[at0003] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[at0005] occurrences matches {0..1} matches {
+                                        value matches {
+                                            -2|[local::at0013],
+                                            -1|[local::at0014],
+                                            0|[local::at0015],
+                                            1|[local::at0016],
+                                            2|[local::at0017]
+                                        }
+                                    }
+                                    ELEMENT[at0006] occurrences matches {0..1} matches {
+                                        value matches {
+                                            -2|[local::at0018],
+                                            -1|[local::at0019],
+                                            0|[local::at0020],
+                                            1|[local::at0021],
+                                            2|[local::at0022]
+                                        }
+                                    }
+                                    ELEMENT[at0007] occurrences matches {0..1} matches {
+                                        value matches {
+                                            -2|[local::at0023],
+                                            -1|[local::at0024],
+                                            0|[local::at0025],
+                                            1|[local::at0026],
+                                            2|[local::at0027]
+                                        }
+                                    }
+                                    ELEMENT[at0008] occurrences matches {0..1} matches {
+                                        value matches {
+                                            -2|[local::at0028],
+                                            -1|[local::at0029],
+                                            0|[local::at0030],
+                                            1|[local::at0031],
+                                            2|[local::at0032]
+                                        }
+                                    }
+                                    ELEMENT[at0009] occurrences matches {0..1} matches {
+                                        value matches {
+                                            -2|[local::at0033],
+                                            -1|[local::at0034],
+                                            0|[local::at0035],
+                                            1|[local::at0036],
+                                            2|[local::at0037]
+                                        }
+                                    }
+                                    ELEMENT[at0010] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_TEXT matches {*}
+                                        }
+                                    }
+                                    ELEMENT[at0011] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_COUNT matches {
+                                                magnitude matches {|>-10..<0|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[at0038] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0039],
+                                            1|[local::at0040],
+                                            2|[local::at0041],
+                                            3|[local::at0042]
+                                        }
+                                    }
+                                    ELEMENT[at0012] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_COUNT matches {
+                                                magnitude matches {|>0..<13|}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[at0004] matches {*}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["en"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"NPASS scale">
+                    description = <"NPASS (Neonatal Pain, Agitation and Sedation Scale) is a tool to assess sedation or pain/agitation in neonates.">
+                    comment = <"Five criteria are graded 0, 1 or 2 for pain/agitation, and 0, −1, or −2 for sedation.">
+                >
+                ["at0001"] = <
+                    text = <"History">
+                    description = <"*">
+                >
+                ["at0002"] = <
+                    text = <"Any Event">
+                    description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+                >
+                ["at0003"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0004"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0005"] = <
+                    text = <"Crying irritability">
+                    description = <"*">
+                >
+                ["at0006"] = <
+                    text = <"Behavior state">
+                    description = <"*">
+                >
+                ["at0007"] = <
+                    text = <"Facial expression">
+                    description = <"*">
+                >
+                ["at0008"] = <
+                    text = <"Extremities tone">
+                    description = <"*">
+                >
+                ["at0009"] = <
+                    text = <"Vital signs (HR, RR, BP, SaO2)">
+                    description = <"*">
+                >
+                ["at0010"] = <
+                    text = <"Comment">
+                    description = <"Additional narrative about the measurement of the scale not captured in other fields.">
+                >
+                ["at0011"] = <
+                    text = <"Total score-Sedation">
+                    description = <"Sedation is scored from 0 to -2 for each behavioral and physiological criteria, then summed and noted as a negative score (0 to -10).">
+                >
+                ["at0012"] = <
+                    text = <"Total score-Pain/Agitation">
+                    description = <"Pain is scored from 0 to +2 for each behavioral and physiological criteria and then summed. Points are added to the premature infant’s pain score based on their gestational age to compensate for their limited ability to behaviorally or physiologically communicate pain. Total pain score is documented as a positive number (0 to +13).">
+                >
+                ["at0013"] = <
+                    text = <"No cry with painful stimuli">
+                    description = <"No response to painful stimuli: no cry with needle sticks, no reaction to ETT or nares suctioning, no response to care giving.">
+                >
+                ["at0014"] = <
+                    text = <"Moans or cries minimaly with painful stimuli">
+                    description = <"Moans, sighs, or cries (audible or silent) minimally to   painful stimuli, e.g. needle sticks, ETT or nares suctioning, care giving.">
+                >
+                ["at0015"] = <
+                    text = <"Appropriate crying, not irritable">
+                    description = <"Not irritable – appropriate crying: cries briefly with normal stimuli, easily consoled, normal for gestational age.">
+                >
+                ["at0016"] = <
+                    text = <"Irritable or crying at intervals, consolable">
+                    description = <"Infant is irritable/crying at intervals – but can be consoled, if intubated – intermittent silent cry.">
+                >
+                ["at0017"] = <
+                    text = <"High pitched or silent-continuous cry, inconsolable">
+                    description = <"Any of the following: cry is high-pitched, infant cries inconsolably, if intubated – silent continuous cry.">
+                >
+                ["at0018"] = <
+                    text = <"No arousal to any stimuli, no spontaneous movement">
+                    description = <"Does not arouse or react to any stimuli: eyes continually shut or open, no spontaneous movement.">
+                >
+                ["at0019"] = <
+                    text = <"Arouses minimally to stimuli, little spontaneous movement">
+                    description = <"Little spontaneous movement, arouses briefly and/or minimally to any stimuli: opens eyes briefly, reacts to suctioning, withdraws to pain.">
+                >
+                ["at0020"] = <
+                    text = <"Appropriate for gestational age">
+                    description = <"Behavior and state are gestational age appropriate.">
+                >
+                ["at0021"] = <
+                    text = <"Restless, squirming, awakens frequently">
+                    description = <"Any of the following: restless, squirming, awakens frequently/easily with minimal or no stimuli.">
+                >
+                ["at0022"] = <
+                    text = <"Arching, kicking, constantly awake or arouses minimally / no movement (not sedated)">
+                    description = <"Any of the following: kicking, arching, constantly awake, no movement or minimal arousal with stimulation (inappropriate for gestational age or clinical situation, i.e. post-operative).">
+                >
+                ["at0023"] = <
+                    text = <"Mouth is lax, no expression">
+                    description = <"Any of the following: mouth is lax, drooling, no facial expression at rest or with stimuli.">
+                >
+                ["at0024"] = <
+                    text = <"Minimal expression with stimuli">
+                    description = <"Minimal facial expression with stimuli.">
+                >
+                ["at0025"] = <
+                    text = <"Relaxed, appropriate">
+                    description = <"Face is relaxed at rest but not lax–normal expression with stimuli.">
+                >
+                ["at0026"] = <
+                    text = <"Any pain expression intermittent">
+                    description = <"Any pain face expression observed intermittently.">
+                >
+                ["at0027"] = <
+                    text = <"Any pain expression continual">
+                    description = <"Any pain face expression is continual.">
+                >
+                ["at0028"] = <
+                    text = <"No grasp reflex, flaccid tone">
+                    description = <"Any of the following: no palmar or planter grasp can be elicited, flaccid tone.">
+                >
+                ["at0029"] = <
+                    text = <"Weak grasp reflex, low muscle tone">
+                    description = <"Any of the following: weak palmar or planter grasp can be elicited, decreased tone. ">
+                >
+                ["at0030"] = <
+                    text = <"Relaxed hands and feet, normal tone">
+                    description = <"Relaxed hands and feet – normal palmar or sole, grasp elicited – appropriate tone for gestational age.">
+                >
+                ["at0031"] = <
+                    text = <"Intermittent clenched toes, fists or finger splay, body is not tense">
+                    description = <"Intermittent (<30 seconds duration) observation of toes and/or hands as clenched or fingers splayed, body is not tense.">
+                >
+                ["at0032"] = <
+                    text = <"Continual clenched toes, fists, or finger splay, body is tense">
+                    description = <"Any of the following: frequent (≥30 seconds duration) observation of toes and/or hands as clenched, or fingers splayed, body is tense/stiff.">
+                >
+                ["at0033"] = <
+                    text = <"No variability with stimuli, hypoventilation or apnea">
+                    description = <"Any of the following:  no variability in vital signs with stimuli, hypoventilation, apnea, ventilated infant – no spontaneous respiratory effort.">
+                >
+                ["at0034"] = <
+                    text = <"Less than 10% variability from baseline with stimuli">
+                    description = <"Vital signs show little variability with stimuli – less  than 10% from baseline.">
+                >
+                ["at0035"] = <
+                    text = <"Within baseline or normal for gestational age">
+                    description = <"Vital signs and/or oxygen saturations are within normal limits with normal variability – or normal           for gestational age.">
+                >
+                ["at0036"] = <
+                    text = <"Between 10-20% from baseline, SaO2 76-85% with stimulation">
+                    description = <"Any of the following: HR, RR, and/or BP are 10-20% above baseline; with care/stimuli infant desaturates minimally to moderately (SaO2 76-85%) and recovers quickly (within 2 minutes).">
+                >
+                ["at0037"] = <
+                    text = <"More than > 20% from baseline, SaO2 < 75% with stimulation, out of sync with vent">
+                    description = <"Any of the following: HR, RR, and/or BP are > 20% above baseline; with care/stimuli infant desaturates severely (SaO2 < 75%) and recovers slowly (> 2 minutes); infant is out of synchrony with the ventilator –fighting the ventilator.">
+                >
+                ["at0038"] = <
+                    text = <"Premature pain assessment">
+                    description = <"Premature infant’s pain score based on their gestational age to compensate for their limited ability to behaviorally or physiologically communicate pain.">
+                >
+                ["at0039"] = <
+                    text = <"36 weeks of gestation or more">
+                    description = <"*">
+                >
+                ["at0040"] = <
+                    text = <"Gestation weeks between 32 and 35">
+                    description = <"*">
+                >
+                ["at0041"] = <
+                    text = <"Gestation weeks between 28 and 31">
+                    description = <"*">
+                >
+                ["at0042"] = <
+                    text = <"Less than 28 weeks of gestation">
+                    description = <"*">
+                >
+            >
+        >
+    >

@@ -1,0 +1,97 @@
+archetype (adl_version=1.4; uid=fd5b7748-1259-4fcb-8ffb-98cc05dbb6d7)
+    openEHR-EHR-EVALUATION.npass_scale_assessment.v0
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["date"] = <"2018-07-02">
+    >
+    lifecycle_state = <"unmanaged">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    other_details = <
+        ["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+        ["custodian_organisation"] = <"openEHR Foundation">
+        ["original_namespace"] = <"org.openehr">
+        ["original_publisher"] = <"openEHR Foundation">
+        ["custodian_namespace"] = <"org.openehr">
+        ["MD5-CAM-1.0.1"] = <"dc49a3ffdea123dca2079c06164c9deb">
+        ["build_uid"] = <"eeda31ff-b311-3adc-b7d9-9563dbcd1eac">
+    >
+
+definition
+    EVALUATION[at0000] matches {
+        data matches {
+            ITEM_TREE[at0001] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    ELEMENT[at0003] occurrences matches {0..1} matches {
+                        value matches {
+                            0|[local::at0004],
+                            1|[local::at0005]
+                        }
+                    }
+                    ELEMENT[at0002] occurrences matches {0..1} matches {
+                        value matches {
+                            0|[local::at0006],
+                            1|[local::at0007],
+                            2|[local::at0008]
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["en"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"NPASS scale assessment">
+                    description = <"NPASS (Neonatal Pain, Agitation and Sedation Scale) is a tool to assess sedation or pain/agitation in neonates.">
+                >
+                ["at0001"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0003"] = <
+                    text = <"Pain/Agitation">
+                    description = <"Pain is scored from 0 to +2 for each behavioral and physiological criteria and then summed. Points are added to the premature infant’s pain score based on their gestational age to compensate for their limited ability to behaviorally or physiologically communicate pain. Total pain score is documented as a positive number (0 to +13).">
+                >
+                ["at0002"] = <
+                    text = <"Sedation">
+                    description = <"Sedation is scored from 0 to -2 for each behavioral and physiological criteria, then summed and noted as a negative score (0 to -10).">
+                    comment = <"A negative score WITHOUT the administration of opioids/ sedatives may indicate: the premature infant’s response to prolonged or persistent pain/stress; or neurologic depression, sepsis, or other pathology.">
+                >
+                ["at0004"] = <
+                    text = <"Score 0-3">
+                    description = <"No pain treatment needed.">
+                    comment = <"Interventions for KNOWN pain/painful stimuli are indicated before the score reaches 3.">
+                >
+                ["at0005"] = <
+                    text = <"Score 4-13">
+                    description = <"Pain treatment needed.">
+                >
+                ["at0006"] = <
+                    text = <"Score from 0 to -1">
+                    description = <"Normal.">
+                >
+                ["at0007"] = <
+                    text = <"Score from -2 to -5">
+                    description = <"Light sedation.">
+                >
+                ["at0008"] = <
+                    text = <"Score from -6 to -10">
+                    description = <"Deep sedation.">
+                >
+            >
+        >
+    >
