@@ -1,0 +1,214 @@
+archetype (adl_version=1.4; uid=9c38074b-2d48-429c-8d0f-1ea00ac8caa3)
+    openEHR-EHR-OBSERVATION.pram.v0
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["date"] = <"2018-07-04">
+    >
+    lifecycle_state = <"unmanaged">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    other_details = <
+        ["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+        ["custodian_organisation"] = <"openEHR Foundation">
+        ["original_namespace"] = <"org.openehr">
+        ["original_publisher"] = <"openEHR Foundation">
+        ["custodian_namespace"] = <"org.openehr">
+    >
+
+definition
+    OBSERVATION[at0000] matches {
+        data matches {
+            HISTORY[at0001] matches {
+                events cardinality matches {0..*; unordered} matches {
+                    EVENT[at0002] matches {
+                        data matches {
+                            ITEM_TREE[at0003] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[at0005] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0010],
+                                            1|[local::at0011],
+                                            2|[local::at0012]
+                                        }
+                                    }
+                                    ELEMENT[at0006] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0013],
+                                            2|[local::at0014]
+                                        }
+                                    }
+                                    ELEMENT[at0007] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0015],
+                                            2|[local::at0016]
+                                        }
+                                    }
+                                    ELEMENT[at0008] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0017],
+                                            1|[local::at0018],
+                                            2|[local::at0019],
+                                            3|[local::at0020]
+                                        }
+                                    }
+                                    ELEMENT[at0009] occurrences matches {0..1} matches {
+                                        value matches {
+                                            0|[local::at0021],
+                                            1|[local::at0022],
+                                            2|[local::at0023],
+                                            3|[local::at0024]
+                                        }
+                                    }
+                                    ELEMENT[at0025] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_TEXT matches {*}
+                                        }
+                                    }
+                                    ELEMENT[at0026] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_COUNT matches {
+                                                magnitude matches {|>0..<12|}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[at0004] matches {*}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["en"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"PRAM">
+                    description = <"Pediatric Respiratory Assessment Measure (PRAM) for Asthma Exacerbation Severity">
+                    comment = <"Measures severity of airway obstruction in pediatric patients using clinical observations.">
+                >
+                ["at0001"] = <
+                    text = <"History">
+                    description = <"*">
+                >
+                ["at0002"] = <
+                    text = <"Any Event">
+                    description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+                >
+                ["at0003"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0004"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0005"] = <
+                    text = <"Oxygen saturation">
+                    description = <"Oxygen saturation is the fraction of oxygen-saturated hemoglobin relative to total hemoglobin (unsaturated + saturated) in the blood. ">
+                >
+                ["at0006"] = <
+                    text = <"Suprasternal retractions present">
+                    description = <"Suprasternal retractions (tracheal tug): Indrawing of the skin in the middle of the neck above the sternum (breastbone).">
+                >
+                ["at0007"] = <
+                    text = <"Scalene muscle contractions present">
+                    description = <"The scalene muscles are a group of three pairs of muscles in the lateral neck, namely the anterior scalene, middle scalene, and posterior scalene. ">
+                >
+                ["at0008"] = <
+                    text = <"Air entry">
+                    description = <"*">
+                    comment = <"If asymmetry, use the most severely affected lung field.">
+                >
+                ["at0009"] = <
+                    text = <"Wheezing">
+                    description = <"Wheezing is a high-pitched whistling sound made while you breathe. It’s heard most clearly when you exhale, but in severe cases, it can be heard when you inhale. It’s caused by narrowed airways or inflammation.">
+                    comment = <"If asymmetry, use the two most severely affected auscultation zones.">
+                >
+                ["at0010"] = <
+                    text = <"Oxygen saturation equal or more than 95% on room air">
+                    description = <"*">
+                >
+                ["at0011"] = <
+                    text = <"Oxygen saturation between 92-94% on room air">
+                    description = <"*">
+                >
+                ["at0012"] = <
+                    text = <"Oxygen saturation less than 92% on room air">
+                    description = <"*">
+                >
+                ["at0013"] = <
+                    text = <"Suprasternal retractions absent">
+                    description = <"*">
+                >
+                ["at0014"] = <
+                    text = <"Suprasternal retractions present">
+                    description = <"*">
+                >
+                ["at0015"] = <
+                    text = <"Scalene muscle contractions absent">
+                    description = <"*">
+                >
+                ["at0016"] = <
+                    text = <"Scalene muscle contractions present">
+                    description = <"*">
+                >
+                ["at0017"] = <
+                    text = <"Normal">
+                    description = <"*">
+                >
+                ["at0018"] = <
+                    text = <"Decreased at the base">
+                    description = <"*">
+                >
+                ["at0019"] = <
+                    text = <"Decreased at the apex and the base">
+                    description = <"*">
+                >
+                ["at0020"] = <
+                    text = <"Minimal or absent">
+                    description = <"*">
+                >
+                ["at0021"] = <
+                    text = <"Absent">
+                    description = <"*">
+                >
+                ["at0022"] = <
+                    text = <"Expiratory only">
+                    description = <"*">
+                >
+                ["at0023"] = <
+                    text = <"Inspiratory and/or expiratory">
+                    description = <"*">
+                >
+                ["at0024"] = <
+                    text = <"Audible without stethoscope or silent chest (minimal or no air entry)">
+                    description = <"*">
+                >
+                ["at0025"] = <
+                    text = <"Comment">
+                    description = <"Any comments regarding the score.">
+                >
+                ["at0026"] = <
+                    text = <"Total score">
+                    description = <"The sum of the ordinal scores recorded for each of the five component responses.">
+                    comment = <"PRAM score: score 0-3 mild;  score 4-7 moderate; score 8-12 severe.">
+                >
+            >
+        >
+    >
