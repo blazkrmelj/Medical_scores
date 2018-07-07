@@ -1,0 +1,287 @@
+archetype (adl_version=1.4; uid=56491514-e55c-43d6-9c95-5739c8dbc16d)
+    openEHR-EHR-OBSERVATION.pas.v0
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["date"] = <"2018-07-07">
+    >
+    lifecycle_state = <"unmanaged">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    other_details = <
+        ["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+        ["custodian_organisation"] = <"openEHR Foundation">
+        ["original_namespace"] = <"org.openehr">
+        ["original_publisher"] = <"openEHR Foundation">
+        ["custodian_namespace"] = <"org.openehr">
+    >
+
+definition
+    OBSERVATION[at0000] matches {
+        data matches {
+            HISTORY[at0001] matches {
+                events cardinality matches {0..*; unordered} matches {
+                    EVENT[at0002] matches {
+                        data matches {
+                            ITEM_TREE[at0003] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[at0005] occurrences matches {0..1} matches {
+                                        value matches {
+                                            1|[local::at0015],
+                                            2|[local::at0016],
+                                            3|[local::at0017]
+                                        }
+                                    }
+                                    ELEMENT[at0006] occurrences matches {0..1} matches {
+                                        value matches {
+                                            1|[local::at0018],
+                                            2|[local::at0019],
+                                            3|[local::at0020]
+                                        }
+                                    }
+                                    ELEMENT[at0007] occurrences matches {0..1} matches {
+                                        value matches {
+                                            1|[local::at0021],
+                                            2|[local::at0022],
+                                            3|[local::at0023]
+                                        }
+                                    }
+                                    ELEMENT[at0008] occurrences matches {0..1} matches {
+                                        value matches {
+                                            1|[local::at0024],
+                                            2|[local::at0025],
+                                            3|[local::at0026]
+                                        }
+                                    }
+                                    ELEMENT[at0009] occurrences matches {0..1} matches {
+                                        value matches {
+                                            1|[local::at0027],
+                                            2|[local::at0028],
+                                            3|[local::at0029]
+                                        }
+                                    }
+                                    ELEMENT[at0010] occurrences matches {0..1} matches {
+                                        value matches {
+                                            1|[local::at0030],
+                                            2|[local::at0031],
+                                            3|[local::at0032]
+                                        }
+                                    }
+                                    ELEMENT[at0011] occurrences matches {0..1} matches {
+                                        value matches {
+                                            1|[local::at0033],
+                                            2|[local::at0034],
+                                            3|[local::at0035]
+                                        }
+                                    }
+                                    ELEMENT[at0012] occurrences matches {0..1} matches {
+                                        value matches {
+                                            1|[local::at0036],
+                                            2|[local::at0037],
+                                            3|[local::at0038]
+                                        }
+                                    }
+                                    ELEMENT[at0013] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_TEXT matches {*}
+                                        }
+                                    }
+                                    ELEMENT[at0014] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_COUNT matches {
+                                                magnitude matches {|>5..<15|}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[at0004] matches {*}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["en"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"PAS">
+                    description = <"PAS (Pediatric Asthma Score) - Stratifies asthma severity in children.">
+                >
+                ["at0001"] = <
+                    text = <"History">
+                    description = <"*">
+                >
+                ["at0002"] = <
+                    text = <"Any Event">
+                    description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+                >
+                ["at0003"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0004"] = <
+                    text = <"ItemTree">
+                    description = <"@ internal @">
+                >
+                ["at0005"] = <
+                    text = <"Respiratory rate (age between 2 and 3 years) ">
+                    description = <"The Respiration rate is the number of breaths a person takes per minute (more formally, the number of movements indicative of inspiration and expiration per unit time). The unit of measure is expressed in breaths per minute (BPM). ">
+                    comment = <"Use when patient age is between 2 and 3 years. Respiratory rate at rest, on room air. ">
+                >
+                ["at0006"] = <
+                    text = <"Respiratory rate (age between 4 and 5 years)">
+                    description = <"The Respiration rate is the number of breaths a person takes per minute (more formally, the number of movements indicative of inspiration and expiration per unit time). The unit of measure is expressed in breaths per minute (BPM). ">
+                    comment = <"Use when patient age is between 4 and 5 years. Respiratory rate at rest, on room air. ">
+                >
+                ["at0007"] = <
+                    text = <"Respiratory rate (age between 6 and 12 years)">
+                    description = <"The Respiration rate is the number of breaths a person takes per minute (more formally, the number of movements indicative of inspiration and expiration per unit time). The unit of measure is expressed in breaths per minute (BPM). ">
+                    comment = <"Use when patient age is between 6 and 12 years. Respiratory rate at rest, on room air.">
+                >
+                ["at0008"] = <
+                    text = <"Respiratory rate (age more than 12 years)">
+                    description = <"The Respiration rate is the number of breaths a person takes per minute (more formally, the number of movements indicative of inspiration and expiration per unit time). The unit of measure is expressed in breaths per minute (BPM). ">
+                    comment = <"Use when patient age is more than 12 years. Respiratory rate at rest, on room air. ">
+                >
+                ["at0009"] = <
+                    text = <"Oxygen saturation">
+                    description = <"Oxygen saturation is the fraction of oxygen-saturated hemoglobin relative to total hemoglobin (unsaturated + saturated) in the blood. ">
+                >
+                ["at0010"] = <
+                    text = <"Auscultation">
+                    description = <"Auscultation is listening to the internal sounds of the body, usually using a stethoscope.">
+                    comment = <"While the patient breathes normally with mouth open, auscultate the lungs, making sure to auscultate the apices and middle and lower lung fields posteriorly, laterally and anteriorly. Alternate and compare sides. Listen to at least one complete respiratory cycle at each site. First listen with quiet respiration. If breath sounds are inaudible, then have him take deep breaths.">
+                >
+                ["at0011"] = <
+                    text = <"Retractions">
+                    description = <"Subcostal retractions: Indrawing of the abdomen just below the rib cage (sometimes referred to as belly breathing).
+Substernal retractions: Indrawing of the abdomen just below the sternum (breastbone).
+Intercostal retractions: Indrawing of the skin in between each rib.">
+                >
+                ["at0012"] = <
+                    text = <"Dyspnea">
+                    description = <"Shortness of breath, also known as dyspnea, is the feeling that one cannot breathe well enough.">
+                >
+                ["at0013"] = <
+                    text = <"Comment">
+                    description = <"Any comments regarding the score.">
+                >
+                ["at0014"] = <
+                    text = <"Total score">
+                    description = <"The sum of the ordinal scores recorded for each of the five component responses.">
+                    comment = <"PAS score: score 5-7 mild; score 8-11 moderate; score 12-15 severe.">
+                >
+                ["at0015"] = <
+                    text = <"Respiratory rate equal or less than 34">
+                    description = <"*">
+                >
+                ["at0016"] = <
+                    text = <"Respiratory rate between 35 and 39">
+                    description = <"*">
+                >
+                ["at0017"] = <
+                    text = <"Respiratory rate equal or more than 40">
+                    description = <"*">
+                >
+                ["at0018"] = <
+                    text = <"Respiratory rate equal or less than 30">
+                    description = <"*">
+                >
+                ["at0019"] = <
+                    text = <"Respiratory rate between 31 and 35">
+                    description = <"*">
+                >
+                ["at0020"] = <
+                    text = <"Respiratory rate equal or more than 36">
+                    description = <"*">
+                >
+                ["at0021"] = <
+                    text = <"Respiratory rate equal or less than 26">
+                    description = <"*">
+                >
+                ["at0022"] = <
+                    text = <"Respiratory rate between 27 and 30">
+                    description = <"*">
+                >
+                ["at0023"] = <
+                    text = <"Respiratrory rate equal or more than 31">
+                    description = <"*">
+                >
+                ["at0024"] = <
+                    text = <"Respiratory rate equal or less than 23">
+                    description = <"*">
+                >
+                ["at0025"] = <
+                    text = <"Respiratory rate between 24 and 27">
+                    description = <"*">
+                >
+                ["at0026"] = <
+                    text = <"Respiratory rate equal or more than 28">
+                    description = <"*">
+                >
+                ["at0027"] = <
+                    text = <">95% on room air">
+                    description = <"*">
+                >
+                ["at0028"] = <
+                    text = <"90-95% on room air">
+                    description = <"*">
+                >
+                ["at0029"] = <
+                    text = <"<90% on room air or any supplemental oxygen">
+                    description = <"*">
+                >
+                ["at0030"] = <
+                    text = <"Normal breath sounds to end-expiratory wheeze only">
+                    description = <"*">
+                >
+                ["at0031"] = <
+                    text = <"Expiratory wheezing">
+                    description = <"*">
+                >
+                ["at0032"] = <
+                    text = <"Inspiratory and expiratory wheezing to diminished breath sounds">
+                    description = <"*">
+                >
+                ["at0033"] = <
+                    text = <"None or intercostal">
+                    description = <"*">
+                >
+                ["at0034"] = <
+                    text = <"Intercostal and substernal">
+                    description = <"*">
+                >
+                ["at0035"] = <
+                    text = <"Intercostal, substernal, and supraclavicular">
+                    description = <"*">
+                >
+                ["at0036"] = <
+                    text = <"Speaks in sentences (or coos and babbles)">
+                    description = <"*">
+                >
+                ["at0037"] = <
+                    text = <"Speaks partial sentences (or short cry)">
+                    description = <"*">
+                >
+                ["at0038"] = <
+                    text = <"Speaks in single words or short phrases (or grunts)">
+                    description = <"*">
+                >
+            >
+        >
+    >
